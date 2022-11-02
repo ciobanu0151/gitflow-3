@@ -1,10 +1,10 @@
-const myFunction = (test,test2) => {
-  const test4 =4
-  const array =[test,test2]
-  console.log('Hello world')
-}
+const myFunction = (test, test2) => {
+  const array = [test, test2];
+  console.log('Hello world', array);
+};
 myFunction(
   4,
-  5
-)
-export {myFunction}
+
+  5,
+  5,
+);
