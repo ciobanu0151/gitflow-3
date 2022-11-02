@@ -6,15 +6,17 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^8.26.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
-  "lint-staged": {
-    "**/*.{js,jsx,json}": ["eslint . --fix", "prettier --write ."]
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --color",
+    "prettier": "prettier src --check",
+    "lint-staged": "lint-staged --config lint-staged.js",
+    "husky-install": "husky install",
+    "prepare": "husky install",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
   },
   "husky": {

@@ -1,0 +1,10 @@
+#For windows
+Open powershell as administrator
+Set-ExecutionPolicy RemoteSigned
+#end
+
+./node_modules/.bin/husky add .husky/pre-commit "npx --no-install lint-staged"
+
+#For windows put back the old policy
+ Set-ExecutionPolicy Restricted
+#end
