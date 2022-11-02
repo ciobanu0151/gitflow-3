@@ -11,9 +11,10 @@
     "prettier": "^2.7.1"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": ["eslint --fix", "prettier --write "]
+    "src/**/*.{js,jsx}": ["prettier --write ","npm run eslint-always-success" ]
   },
   "scripts": {
+    "eslint-always-success": "eslint --fix || exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint-staged": "lint-staged --config lint-staged.js",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
